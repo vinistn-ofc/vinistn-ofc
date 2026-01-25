@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Científica</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="calculator-header">
+                <h1>Calculadora Científica</h1>
+                <div class="mode-toggle">
+                    <button id="basicMode" class="mode-btn active">Básica</button>
+                    <button id="scientificMode" class="mode-btn">Científica</button>
+                </div>
+            </div>
+            
+            <div class="display">
+                <div class="display-previous" id="previousDisplay"></div>
+                <div class="display-current" id="currentDisplay">0</div>
+            </div>
+            
+            <div class="buttons">
+                <!-- Basic Mode Buttons -->
+                <div class="basic-buttons" id="basicButtons">
+                    <!-- First Row -->
+                    <button class="btn btn-clear" onclick="clearAll()">AC</button>
+                    <button class="btn btn-clear" onclick="clearEntry()">CE</button>
+                    <button class="btn btn-operator" onclick="deleteLast()">⌫</button>
+                    <button class="btn btn-operator" onclick="appendOperator('/')">÷</button>
+                    
+                    <!-- Second Row -->
+                    <button class="btn btn-number" onclick="appendNumber('7')">7</button>
+                    <button class="btn btn-number" onclick="appendNumber('8')">8</button>
+                    <button class="btn btn-number" onclick="appendNumber('9')">9</button>
+                    <button class="btn btn-operator" onclick="appendOperator('*')">×</button>
+                    
+                    <!-- Third Row -->
+                    <button class="btn btn-number" onclick="appendNumber('4')">4</button>
+                    <button class="btn btn-number" onclick="appendNumber('5')">5</button>
+                    <button class="btn btn-number" onclick="appendNumber('6')">6</button>
+                    <button class="btn btn-operator" onclick="appendOperator('-')">−</button>
+                    
+                    <!-- Fourth Row -->
+                    <button class="btn btn-number" onclick="appendNumber('1')">1</button>
+                    <button class="btn btn-number" onclick="appendNumber('2')">2</button>
+                    <button class="btn btn-number" onclick="appendNumber('3')">3</button>
+                    <button class="btn btn-operator" onclick="appendOperator('+')">+</button>
+                    
+                    <!-- Fifth Row -->
+                    <button class="btn btn-number btn-zero" onclick="appendNumber('0')">0</button>
+                    <button class="btn btn-number" onclick="appendDecimal()">.</button>
+                    <button class="btn btn-operator" onclick="appendOperator('/')">÷</button>
+                    <button class="btn btn-equals" onclick="calculate()">=</button>
+                </div>
+                
+                <!-- Scientific Mode Buttons -->
+                <div class="scientific-buttons" id="scientificButtons" style="display: none;">
+                    <!-- First Row - Scientific Functions -->
+                    <button class="btn btn-scientific" onclick="scientificFunction('sin')">sin</button>
+                    <button class="btn btn-scientific" onclick="scientificFunction('cos')">cos</button>
+                    <button class="btn btn-scientific" onclick="scientificFunction('tan')">tan</button>
+                    <button class="btn btn-scientific" onclick="scientificFunction('log')">log</button>
+                    <button class="btn btn-scientific" onclick="scientificFunction('ln')">ln</button>
+                    
+                    <!-- Second Row - Powers and Roots -->
+                    <button class="btn btn-scientific" onclick="scientificFunction('sqrt')">√</button>
+                    <button class="btn btn-scientific" onclick="appendOperator('^')">x^y</button>
+                    <button class="btn btn-scientific" onclick="scientificFunction('pow2')">x²</button>
+                    <button class="btn btn-scientific" onclick="scientificFunction('pow3')">x³</button>
+                    <button class="btn btn-scientific" onclick="appendOperator('%')">%</button>
+                    
+                    <!-- Third Row - Constants and Memory -->
+                    <button class="btn btn-scientific" onclick="appendConstant('pi')">π</button>
+                    <button class="btn btn-scientific" onclick="appendConstant('e')">e</button>
+                    <button class="btn btn-scientific" onclick="memoryFunction('MC')">MC</button>
+                    <button class="btn btn-scientific" onclick="memoryFunction('MR')">MR</button>
+                    <button class="btn btn-scientific" onclick="memoryFunction('M+')">M+</button>
+                    
+                    <!-- Fourth Row - Parentheses -->
+                    <button class="btn btn-scientific" onclick="appendParenthesis('(')">(</button>
+                    <button class="btn btn-scientific" onclick="appendParenthesis(')')">)</button>
+                    <button class="btn btn-scientific" onclick="scientificFunction('factorial')">n!</button>
+                    <button class="btn btn-scientific" onclick="toggleSign()">±</button>
+                    <button class="btn btn-scientific" onclick="appendOperator('/')">÷</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

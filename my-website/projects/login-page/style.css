@@ -1,0 +1,398 @@
+/* ==============================
+   RESET BÁSICO E BOX-SIZING
+   ============================== */
+
+/* Remove margens e padding padrão e ativa box-sizing border-box */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==============================
+   BODY — CONFIGURAÇÕES GERAIS
+   ============================== */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  min-height: 100vh; /* Ocupa toda a altura da tela */
+  width: 100%;
+  background-image: url(/projects/login-page/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  padding-top: 85px; /* Espaço para o header fixo */
+}
+
+/* ==============================
+   HEADER — TOPO FIXO
+   ============================== */
+header {
+  flex-wrap: wrap;
+  display: flex; /* Ativa flexbox */
+  justify-content: space-between; /* Logo à esquerda, menu à direita */
+  align-items: center; /* Centraliza itens verticalmente */
+  padding: 15px 20px;
+  height: 70px; /* Altura do header */
+  background-color: rgb(255, 243, 202);
+  position: fixed; /* Header fixo no topo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Fica acima de outros elementos */
+  border-radius: 0 0 20px 20px; /* Bordas arredondadas embaixo */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Menu Hamburguer */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+  background: none;
+  border: none;
+  z-index: 11;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(255, 60, 0);
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* LOGO */
+.logo a {
+  text-decoration: none; /* Remove sublinhado */
+  color: rgb(255, 60, 0); /* Cor do texto */
+  font-size: 24px;
+  font-weight: 700; /* Negrito forte */
+}
+
+/* NAV LINKS */
+.nav-links {
+  transition: all 0.3s ease;
+}
+
+.nav-links ul {
+  display: flex; /* Deixa os <li> lado a lado */
+  flex-wrap: wrap;
+  gap: 20px; /* Espaço entre os links */
+  list-style: none; /* Remove bullets */
+}
+
+.nav-links a {
+  text-decoration: none; /* Remove sublinhado */
+  color: rgb(255, 60, 0);
+  font-size: 18px;
+  transition: 0.3s; /* Suaviza hover */
+}
+
+.nav-links a:hover {
+  color: rgb(100, 90, 160); /* Mudança de cor ao passar o mouse */
+}
+
+/* ==============================
+   CONTAINER — CENTRALIZA O FORMULÁRIO
+   ============================== */
+.container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontal */
+  align-items: center; /* Centraliza vertical */
+  flex: 1; /* Ocupa espaço restante da tela */
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* ==============================
+   FORMULÁRIO — ESTILO MODERNO
+   ============================== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px; /* Espaço entre elementos internos */
+  background: rgba(255, 255, 255, 0.95); /* Fundo semi-transparente */
+  padding: 30px;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 20px; /* Bordas arredondadas */
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.15); /* Sombra suave */
+  backdrop-filter: blur(10px); /* Efeito blur */
+  animation: fadeIn 0.6s ease; /* Animação suave de entrada */
+  margin: 20px;
+}
+
+/* Título do formulário */
+.form h2 {
+  text-align: center;
+  color: rgb(255, 60, 0);
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+/* Agrupamento de inputs */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Labels */
+.input-group label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Inputs */
+.form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+
+/* Efeito de foco nos inputs */
+.form input:focus {
+  border-color: rgb(255, 60, 0);
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 60, 0, 0.4);
+}
+
+/* Botão */
+.form button {
+  padding: 12px;
+  background-color: rgb(255, 60, 0);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+/* Hover do botão */
+.form button:hover {
+  background-color: rgb(100, 90, 160);
+  transform: scale(1.03);
+}
+
+/* ==============================
+   ANIMAÇÃO SUAVE DE ENTRADA
+   ============================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+    padding-top: 90px;
+  }
+  
+  header {
+    padding: 12px 15px;
+    height: 75px;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  .logo a {
+    font-size: 20px;
+  }
+  
+  .nav-links a {
+    font-size: 16px;
+  }
+  
+  .form {
+    max-width: 340px;
+    padding: 25px;
+    margin: 15px;
+  }
+  
+  .form h2 {
+    font-size: 22px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+    padding-top: 80px;
+  }
+  
+  header {
+    padding: 15px;
+    height: auto;
+    min-height: 65px;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: rgb(255, 243, 202);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 80px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+  }
+  
+  .nav-links.active {
+    right: 0;
+  }
+  
+  .nav-links ul {
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .nav-links a {
+    display: block;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 60, 0, 0.1);
+  }
+  
+  .nav-links a:hover {
+    background-color: rgba(255, 60, 0, 0.1);
+    color: rgb(255, 60, 0);
+    transform: translateX(5px);
+  }
+  
+  .logo a {
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    margin-bottom: 0;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+  
+  .form {
+    max-width: 300px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+  }
+  
+  .form h2 {
+    font-size: 20px;
+  }
+  
+  .form input {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .form button {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile Pequeno */
+@media (max-width: 320px) {
+  body {
+    padding: 8px;
+    padding-top: 75px;
+  }
+  
+  header {
+    padding: 12px;
+    min-height: 60px;
+  }
+  
+  .hamburger {
+    padding: 3px;
+  }
+  
+  .hamburger span {
+    width: 20px;
+    height: 2px;
+    margin: 2px 0;
+  }
+  
+  .nav-links {
+    width: 200px;
+  }
+  
+  .nav-links a {
+    font-size: 14px;
+    padding: 12px 15px;
+  }
+  
+  .logo a {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  
+  .form {
+    max-width: 280px;
+    padding: 15px;
+    margin: 8px;
+  }
+  
+  .form h2 {
+    font-size: 18px;
+  }
+  
+  .form input {
+    padding: 8px;
+    font-size: 13px;
+  }
+  
+  .form button {
+    padding: 8px;
+    font-size: 14px;
+  }
+}

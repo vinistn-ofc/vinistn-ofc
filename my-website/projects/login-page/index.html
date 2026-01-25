@@ -1,0 +1,63 @@
+<!--Este projeto, foi 100% criado por: Vinicius Santana - Github: Vinistn-ofc-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="#">LOGO</a>
+      </div>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Prices</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="container">
+      <form class="form" action="javascript:void(0)" method="get">
+        <h2>Login</h2>
+        <div class="input-group">
+          <label>Username</label>
+          <input type="text" placeholder="Your Username" />
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" placeholder="Your Password" />
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+      });
+
+      // Close menu when clicking on a link
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('active');
+        });
+      });
+    </script>
+  </body>
+</html>

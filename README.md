@@ -11,7 +11,7 @@
 </p>
 
 <div align="center">
-  <a href="https://www.instagram.com/vinistn-oficial">
+  <a href="https://www.instagram.com/vinistn-ofc">
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
   </a>
   <a href="https://www.linkedin.com/in/vinistn">
@@ -62,16 +62,16 @@
 ## 📊 Estatísticas
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=vinistn-oficial&show_icons=true&theme=dracula&count_private=true" height="150" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vinistn-oficial&layout=compact&theme=dracula" height="150" />
+  <img src="https://github-readme-stats.vercel.app/api?username=vinistn-ofc&show_icons=true&theme=dracula&count_private=true" height="150" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vinistn-ofc&layout=compact&theme=dracula" height="150" />
 </div>
 
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
 
 ## 📌 Projetos em destaque
 
-- 🔗 [Portfólio Online](https://my-portifolio-lemon.vercel.app)  
-- 📂 [Repositórios GitHub](https://github.com/vinistn-oficial?tab=repositories)  
+- 🔗 [Portfólio Online](https://vinistn.vercel.app)  
+- 📂 [Repositórios GitHub](https://github.com/vinistn-ofc?tab=repositories)  
 
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
 

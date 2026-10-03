@@ -1,6 +1,6 @@
 <h1 align="center">
   <p>
-    <img src="https://files.catbox.moe/go9zmx.png" alt="vinicius" width="720">
+    <img src="https://files.catbox.moe/go9zmx.png" alt="vinicius" height="600" width="700">
   </p>
 </h1>
 

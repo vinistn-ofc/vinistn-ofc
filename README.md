@@ -1,7 +1,8 @@
 <div align="center">
 
 ![github-trophies](https://stats.hyo.dev/api/github-trophies?login=vinistn-ofc)
-
+<!-- hyochan -->
+![github-trophies](https://stats.hyo.dev/api/github-trophies?login=hyochan)
 </div>
 
 <p align="center">

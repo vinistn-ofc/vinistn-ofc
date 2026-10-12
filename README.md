@@ -1,7 +1,10 @@
 <div align="center">
 <!-- hyochan -->
   
-![github-trophies](https://stats.hyo.dev/api/github-trophies?login=vinistn-ofc)
+<div align="center">
+
+![streak](https://streak-stats.demolab.com?user=vinistn-ofc&theme=dracula&hide_border=true)
+
 </div>
 
 <p align="center">

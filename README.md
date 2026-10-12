@@ -4,7 +4,7 @@
 <div align="center">
 
 <!-- kyechan99/capsule-render -->
-![Cabeçalho do Capsule-Render](https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=Vinicius%20Santana&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Web%20Developer&descAlignY=51&descAlign=62)
+![Cabeçalho do Capsule-Render](https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=Vinicius%20Santana&fontSize=90&animation=fadeIn&fontAlignY=38&desc=&descAlignY=51&descAlign=62)
 
 </div>
 
